@@ -16,7 +16,8 @@
 <div class="container-fluid" id="app">
     <div class="row">
         <div class="col-md">
-            <youtube-dash></youtube-dash>
+            {{--<youtube-dash></youtube-dash>--}}
+            <router-view></router-view>
         </div>
     </div>
 </div>
