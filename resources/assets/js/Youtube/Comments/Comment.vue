@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="comment__wrapper">
+        <div class="comment__wrapper mb-3">
             <div class="card-body">
                 {{ comment.body }}
                 <br>
@@ -16,3 +16,10 @@
         props: ['comment']
     }
 </script>
+
+<style>
+    .comment__wrapper{
+        background-color: #fff;
+        border-radius: 7px;
+    }
+</style>

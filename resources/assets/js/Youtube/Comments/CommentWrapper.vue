@@ -18,6 +18,11 @@
         created() {
             window.eventBus.$on('commentAddEvent', comment => this.handleNewCommentAdded(comment))
             this.loadComments()
+            console.log('event')
+            window.Echo.channel('comments').listen('.comment.created', event => {
+                console.log('event', event)
+                this.handleNewCommentAdded(event.comment)
+            })
         },
         data() {
             return {
@@ -43,3 +48,4 @@
 
     }
 </script>
+

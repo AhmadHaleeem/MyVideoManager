@@ -1,11 +1,12 @@
 <template>
     <div class="VideoItem__wrapper">
+
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" :src="videoImage" :alt="videoTitle">
             <div class="card-body">
                 <h5 class="card-title">{{ videoTitle }}</h5>
                 <p class="card-text">{{ videoDescription }}</p>
-                <router-link :to="{name: 'youtube-video', params: {id: video.id.videoId, video: video}}" class="btn btn-primary">
+                <router-link :to="{name: 'youtube-video', params: {id: video.id.videoId}}" class="btn btn-primary">
                     Show video
                 </router-link>
             </div>
