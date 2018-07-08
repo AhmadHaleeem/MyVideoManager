@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('mail', function () {
+//
+//    return new \App\Mail\ActivateUserAccount();
+//});
+
+Route::get('/', 'GuestController@welcome');
+Route::get('/activate-account/{token}', 'GuestController@verify')->name('activate-account');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

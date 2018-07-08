@@ -12,5 +12,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        factory(\App\User::class)->create([
+            'name' => 'Ahmad',
+            'email' => 'ahmad@gmail.com',
+            'password' => bcrypt('123123'),
+            'is_active' => 1
+        ]);
+
+        factory(\App\User::class, 10)->create();
     }
 }
