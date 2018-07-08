@@ -9,7 +9,9 @@
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe :src="url" class="embed-responsive-item"></iframe>
             </div>
-
+        </div>
+        <div class="col-sm-8 col-sm-push-2">
+            <comment-wrapper></comment-wrapper>
         </div>
 
     </div>
@@ -17,7 +19,9 @@
 
 
 <script>
+    import CommentWrapper from './Comments/CommentWrapper.vue'
     export default {
+        components: { CommentWrapper },
         created() {
            if (this.$route.params.video == undefined) {
                this.$router.push({ name: 'youtube-dash' })
